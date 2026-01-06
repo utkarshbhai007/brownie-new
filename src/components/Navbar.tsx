@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -7,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -17,79 +18,95 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
+    { name: "Events", href: "#events" },
     { name: "Menu", href: "#menu" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-chocolate/95 backdrop-blur-md shadow-elevated py-3" 
-          : "bg-transparent py-6"
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className="font-script text-3xl text-cream">Brown Art</span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-cream/80 hover:text-coral transition-colors duration-300 font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
-            <a 
-              href="tel:+919904624888"
-              className="px-6 py-2.5 bg-coral text-cream font-medium rounded-full hover:bg-coral-light transition-all duration-300"
-            >
-              Call Now
+    <>
+      <nav
+        className={`fixed top-4 left-4 right-4 z-50 transition-all duration-500 ${isScrolled ? "max-w-4xl mx-auto" : "max-w-7xl mx-auto"
+          }`}
+      >
+        <div
+          className={`
+            relative px-6 py-4 rounded-full border transition-all duration-300
+            ${isScrolled
+              ? "bg-chocolate/40 backdrop-blur-xl border-cream/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]"
+              : "bg-white/5 backdrop-blur-md border-white/10 shadow-lg"
+            }
+          `}
+        >
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <a href="#" className="flex items-center gap-2 group">
+              <img src={logo} alt="Brown Art Logo" className="h-12 w-auto object-contain" />
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-cream p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-2">
+              <div className="flex items-center bg-black/20 rounded-full px-2 py-1 mr-4 border border-white/5">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="px-4 py-2 text-sm text-cream/90 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300 font-medium"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-cream/10 pt-4">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-cream/80 hover:text-coral transition-colors duration-300 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-              <a 
+              <a
                 href="tel:+919904624888"
-                className="inline-flex justify-center px-6 py-2.5 bg-coral text-cream font-medium rounded-full hover:bg-coral-light transition-all duration-300"
+                className="px-6 py-2.5 bg-gradient-to-r from-coral to-coral-light text-cream font-medium rounded-full hover:shadow-[0_0_20px_rgba(255,127,80,0.5)] transition-all duration-300 transform hover:scale-105"
               >
                 Call Now
               </a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-cream p-2 hover:bg-white/10 rounded-full transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+
+        {/* Mobile Navigation Dropdown */}
+        <div
+          className={`
+            absolute top-full left-0 right-0 mt-2 p-4 rounded-3xl
+            bg-chocolate/90 backdrop-blur-xl border border-cream/10 shadow-xl
+            transition-all duration-300 origin-top
+            ${isMenuOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-4 pointer-events-none"}
+          `}
+        >
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-center py-3 text-cream/90 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <a
+              href="tel:+919904624888"
+              className="mt-2 text-center py-3 bg-coral text-cream font-medium rounded-xl shadow-lg hover:bg-coral-light transition-all duration-300"
+            >
+              Call Now
+            </a>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 
