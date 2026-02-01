@@ -68,7 +68,10 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center text-cream/70">
                 <Phone className="w-5 h-5 text-coral mr-2" />
-                <span>99046 24888</span>
+                <div className="flex flex-col text-left">
+                  <span>99046 24888</span>
+                  <span>99789 00948</span>
+                </div>
               </div>
             </div>
           </div>

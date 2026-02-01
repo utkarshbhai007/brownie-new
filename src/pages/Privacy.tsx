@@ -47,7 +47,7 @@ const Privacy = () => {
                         <p className="mb-4">
                             If you have any questions about this Privacy Policy, please contact us at: <br />
                             <strong>Email:</strong> contact@brownart.in <br />
-                            <strong>Phone:</strong> +91 99046 24888
+                            <strong>Phone:</strong> +91 99046 24888 / +91 99789 00948
                         </p>
                     </div>
                 </div>
