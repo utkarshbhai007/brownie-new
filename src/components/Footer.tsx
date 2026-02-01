@@ -69,11 +69,11 @@ const Footer = () => {
             <div className="bg-cream/5 p-6 rounded-2xl border border-cream/10">
               <p className="text-cream/80 text-sm mb-2 flex justify-between">
                 <span>Mon - Fri:</span>
-                <span className="text-coral">11 AM - 11 PM</span>
+                <span className="text-coral">6:30 PM - 12:30 AM</span>
               </p>
               <p className="text-cream/80 text-sm flex justify-between">
                 <span>Sat - Sun:</span>
-                <span className="text-coral">11 AM - 12 AM</span>
+                <span className="text-coral">6:30 PM - 01:00 AM</span>
               </p>
               <div className="mt-4 pt-4 border-t border-cream/10">
                 <p className="text-xs text-cream/40 italic text-center">Open for dine-in and takeaway</p>
