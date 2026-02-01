@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -43,21 +43,21 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2 group">
+            <Link to="/" className="flex items-center gap-2 group">
               <img src={logo} alt="Brown Art Logo" className="h-12 w-auto object-contain" />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-2">
               <div className="flex items-center bg-black/20 rounded-full px-2 py-1 mr-4 border border-white/5">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     className="px-4 py-2 text-sm text-cream/90 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300 font-medium"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
@@ -91,14 +91,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-center py-3 text-cream/90 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href="tel:+919904624888"
