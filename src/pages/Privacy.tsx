@@ -46,7 +46,7 @@ const Privacy = () => {
                         <h2 className="font-display text-2xl text-chocolate mt-8 mb-4">5. Contact Us</h2>
                         <p className="mb-4">
                             If you have any questions about this Privacy Policy, please contact us at: <br />
-                            <strong>Email:</strong> hello@brownart.com <br />
+                            <strong>Email:</strong> contact@brownart.in <br />
                             <strong>Phone:</strong> +91 99046 24888
                         </p>
                     </div>
