@@ -101,7 +101,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919904624888"
+              href="tel:+919978900948"
               className="mt-2 text-center py-3 bg-coral text-cream font-medium rounded-xl shadow-lg hover:bg-coral-light transition-all duration-300"
             >
               Call Now
