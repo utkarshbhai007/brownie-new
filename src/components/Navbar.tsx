@@ -62,7 +62,7 @@ const Navbar = () => {
               </div>
 
               <a
-                href="tel:+919904624888"
+                href="tel:+919978900948"
                 className="px-6 py-2.5 bg-gradient-to-r from-coral to-coral-light text-cream font-medium rounded-full hover:shadow-[0_0_20px_rgba(255,127,80,0.5)] transition-all duration-300 transform hover:scale-105"
               >
                 Call Now

@@ -114,7 +114,7 @@ const ContactSection = () => {
               </div>
               <div className="text-left">
                 <p className="text-cream/60 text-sm">Open Daily</p>
-                <p className="text-xl text-cream font-medium">5:00 PM - 11:00 PM</p>
+                <p className="text-xl text-cream font-medium">6:30 PM - 12:30 AM</p>
               </div>
             </div>
 
