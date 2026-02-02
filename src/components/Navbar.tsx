@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
-              <img src={logo} alt="Brown Art Logo" className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt="Brown Art Logo" className="h-20 w-auto object-contain" />
             </Link>
 
             {/* Desktop Navigation */}
