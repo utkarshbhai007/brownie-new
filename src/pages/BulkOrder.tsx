@@ -95,7 +95,7 @@ const BulkOrder = () => {
 
                     <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-chocolate/10 shadow-xl">
                         <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                            <form action="https://formsubmit.co/contact@brownart.in" method="POST" className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <FormField
                                         control={form.control}

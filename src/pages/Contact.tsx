@@ -100,7 +100,7 @@ const Contact = () => {
                         <div className="w-full lg:w-3/5 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-chocolate/5">
                             <h2 className="text-3xl font-display text-chocolate mb-8">Send us a Message</h2>
                             <Form {...form}>
-                                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                                <form action="https://formsubmit.co/contact@brownart.in" method="POST" className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <FormField
                                             control={form.control}
