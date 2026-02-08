@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-caramel/20 rounded-full animate-float" />
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-12 lg:py-0">
+      <div className="container mx-auto px-4 pt-32 pb-12 lg:py-0">
         <div className="flex flex-col lg:flex-row items-center min-h-screen">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left py-12 lg:py-0 z-10">
