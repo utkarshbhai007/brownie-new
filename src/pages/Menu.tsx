@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
-import { UtensilsLine } from "lucide-react";
+import { Utensils } from "lucide-react";
 
 const Menu = () => {
     useEffect(() => {
@@ -16,7 +16,7 @@ const Menu = () => {
                 <div className="container mx-auto text-center">
                     <div className="mb-8 flex justify-center">
                         <div className="w-24 h-24 bg-coral/10 rounded-full flex items-center justify-center animate-bounce">
-                            <UtensilsLine className="w-12 h-12 text-coral" />
+                            <Utensils className="w-12 h-12 text-coral" />
                         </div>
                     </div>
 
