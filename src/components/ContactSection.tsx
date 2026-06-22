@@ -13,9 +13,9 @@ const ContactSection = () => {
       mapQuery: "Spicy Street Kudasan Gandhinagar",
     },
     {
-      title: "Brown Art (Swarnim park)",
-      address: "Near small G-4 Understand, Swarnim Park lane road, Behind Ambedkar Hall, Sector -12c, Gandhinagar",
-      mapQuery: "Sector 12c Gandhinagar",
+      title: "Brown Art (Pramukh Furniture)",
+      address: "Pramukh furniture, opp prominent Hotel, Kudasan, Gandhinagar",
+      mapQuery: "Pramukh furniture Kudasan Gandhinagar",
     },
   ];
 
