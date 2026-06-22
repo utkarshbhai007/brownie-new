@@ -47,7 +47,7 @@ const EventsSection = () => {
     ];
 
     return (
-        <section id="events" className="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <section id="events" className="py-10 lg:py-16 bg-white relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-cream/5 skew-x-12" />
 

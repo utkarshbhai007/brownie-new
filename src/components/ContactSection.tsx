@@ -20,7 +20,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="contact" className="py-10 lg:py-16 bg-background relative overflow-hidden">
       {/* Background blobs */}
       <div className="absolute top-20 left-0 w-64 h-64 bg-coral/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-20 right-0 w-80 h-80 bg-chocolate/5 rounded-full blur-3xl -z-10" />

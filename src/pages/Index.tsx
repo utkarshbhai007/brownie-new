@@ -13,7 +13,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <HotFavoritesSection />
+        {/* <HotFavoritesSection /> */}
         <AboutSection />
         <MenuSection />
         <EventsSection />

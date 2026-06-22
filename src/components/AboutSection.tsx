@@ -25,7 +25,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="relative py-24 lg:py-40 overflow-hidden bg-background">
+    <section id="about" className="relative py-12 lg:py-20 overflow-hidden bg-background">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-coral/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-chocolate/5 rounded-full blur-3xl" />
